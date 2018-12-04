@@ -41,3 +41,5 @@ Here I am making some notes on what the `bootstrap` and `function.sh` files are 
 It seems only lines 16 & 17 are where the function gets executed. If the binary for the runtime is accessible, this could be a call to a function as long as it understands the syntax of the request payload.
 
 Use the existing bash curl statements to interact with the runtime api, there's no need to implement that in each language.
+
+In the Lambda environment, I can't install the R binaries to `/usr/bin` or `/usr/lib64/R`. Need to figure out a way to spoof these paths or re-direct them to the deployment package or layer version of the same files. 
